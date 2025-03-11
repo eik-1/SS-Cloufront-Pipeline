@@ -1,10 +1,9 @@
-import { NavLink, useNavigate } from "react-router-dom"
-import { useEffect, useState } from "react"
 import { useUser } from "@/contexts/UserContext"
 import { useToast } from "@/hooks/use-toast"
 import { Menu, X } from "lucide-react"
-import { useLocation } from "react-router-dom"
-import {motion} from "motion/react"
+import { motion } from "motion/react"
+import { useEffect, useState } from "react"
+import { NavLink, useLocation, useNavigate } from "react-router-dom"
 
 function LandingNav() {
     const navigate = useNavigate()
@@ -56,7 +55,7 @@ function LandingNav() {
                         className="text-xl w-full flex   lg:pl-0 text-center lg:w-max lg:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-rose-500 to-orange-500 cursor-pointer"
                        >
                      
-                        <p className="w-full pl-6 lg:pl-0 lg:w-max "><span onClick={() => navigate("/")}>SnapSTUDIO</span></p>
+                        <p className="w-full pl-6 lg:pl-0 lg:w-max "><span onClick={() => navigate("/")}>Bombaclat</span></p>
                         <div className="lg:hidden z-[80] flex items-center">
                     <button
                         onClick={toggleMenu}
