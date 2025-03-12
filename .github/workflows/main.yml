@@ -21,6 +21,12 @@ jobs:
         run: npm ci
       - name: Build application
         run: npm run build
+        env:
+          VITE_API_UR: ${{ secrets.VITE_API_URL }}
+          VITE_APP_URL: ${{ secrets.VITE_APP_URL }}
+          VITE_SUPABASE_KEY: ${{ secrets.VITE_SUPABASE_KEY }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PROJECT_ID: ${{ secrets.VITE_SUPABASE_PROJECT_ID }}
       - name: Deploy to S3
         run: aws s3 sync ./dist/ s3://${{ secrets.BUCKET_ID }}
       - name: Create CloudFront invalidation
